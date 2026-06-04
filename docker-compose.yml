@@ -1,0 +1,8 @@
+services:
+  dashboard:
+    build: .
+    env_file: .env
+    ports:
+      - "8502:8502"
+    volumes:
+      - ./data:/app/data

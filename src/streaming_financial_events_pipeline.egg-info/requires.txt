@@ -1,0 +1,13 @@
+pydantic>=2.7
+python-dotenv>=1.0
+
+[dev]
+pytest>=8.2
+ruff>=0.5
+
+[spark]
+pyspark>=3.5
+
+[ui]
+streamlit>=1.36
+pandas>=2.2

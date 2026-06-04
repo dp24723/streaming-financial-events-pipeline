@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streaming-financial-events-pipeline"
+version = "0.1.0"
+description = "Local financial event pipeline with validation, warehouse tables, and dashboard."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.7",
+    "python-dotenv>=1.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2", "ruff>=0.5"]
+ui = ["streamlit>=1.36", "pandas>=2.2"]
+spark = ["pyspark>=3.5"]
+
+[project.scripts]
+financial-pipeline = "finance_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

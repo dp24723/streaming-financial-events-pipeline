@@ -1,0 +1,2 @@
+[console_scripts]
+financial-pipeline = finance_pipeline.cli:main
